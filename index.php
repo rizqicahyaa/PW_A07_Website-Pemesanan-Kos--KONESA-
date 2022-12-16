@@ -174,7 +174,7 @@ $kon = new Koneksi();
                   <i class="fa fa-location-dot"><?php echo $hasil['kos_lokasi']; ?></i>
                 </p>
                 <p class="address"  style="color:#0054d7;">
-                  <i class="fa fa-map-location-dot"><?php echo $hasil['kos_alamat']; ?></i>
+                  <i class="fa fa-map-location-dot mt-2"> <?php echo $hasil['kos_alamat']; ?></i>
                 </p>
                 <div
                   class="property-meta-data d-flex align-items-end justify-content-between"
