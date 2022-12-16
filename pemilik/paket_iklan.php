@@ -102,7 +102,6 @@ $idiklan = @$_REQUEST['iklan_id'];
         </div>
       </div>
     </section>
-    </script>
     <!-- ##### Featured Properties Area End ##### -->
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="jquery.form.js"></script>
