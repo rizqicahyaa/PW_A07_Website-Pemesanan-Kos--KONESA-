@@ -102,60 +102,6 @@ $idiklan = @$_REQUEST['iklan_id'];
         </div>
       </div>
     </section>
-    <!-- js membuat input No.Hp hanya angka  -->
-    <script type="text/javascript">
-      function Angkasaja(evt) {
-        var charCode = evt.which ? evt.which : event.keyCode;
-        if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
-        return true;
-      }
-    </script>
-
-    <!-- js Upload Gambar -->
-    <script>
-      $(document).ready(function () {
-        $("form").ajaxForm(function () {
-          alert("Uploaded SuccessFully");
-        });
-      });
-
-      function preview_image() {
-        var total_file = document.getElementById("upload_file").files.length;
-        for (var i = 0; i < total_file; i++) {
-          $("#image_preview").append(
-            "<img src='" + URL.createObjectURL(event.target.files[i]) + "'><br>"
-          );
-          $("#image_preview img").css({
-            height: "200px",
-            "margin-top": "10px",
-          });
-        }
-      }
-    </script>
-
-    <!--js Harga-->
-    <script>
-      var harga = document.getElementById("tharga");
-      harga.addEventListener("keyup", function (e) {
-        harga.value = formatRupiah(this.value);
-      });
-
-      /* Fungsi */
-      function formatRupiah(angka, prefix) {
-        var number_string = angka.replace(/[^,\d]/g, "").toString(),
-          split = number_string.split(","),
-          sisa = split[0].length % 3,
-          rupiah = split[0].substr(0, sisa),
-          ribuan = split[0].substr(sisa).match(/\d{3}/gi);
-
-        if (ribuan) {
-          separator = sisa ? "." : "";
-          rupiah += separator + ribuan.join(".");
-        }
-
-        rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
-        return prefix == undefined ? rupiah : rupiah ? "Rp. " + rupiah : "";
-      }
     </script>
     <!-- ##### Featured Properties Area End ##### -->
     <script type="text/javascript" src="jquery.js"></script>
