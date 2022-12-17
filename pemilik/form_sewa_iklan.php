@@ -153,39 +153,6 @@ $idkos = @$_REQUEST['kos_id'];
         </div>
       </div>
     </section>
-    
-    <!-- js membuat input No.Hp hanya angka  -->
-    <script type="text/javascript">
-        function Angkasaja(evt){
-          var charCode = (evt.which) ? evt.which : event.keyCode
-          if (charCode > 31 && (charCode < 48 || charCode > 57))
-          return false;
-          return true;
-        }
-      </script>
-
-     <!-- js Upload Gambar --> 
-    <script>
-      $(document).ready(function() 
-      { 
-      $('form').ajaxForm(function() 
-      {
-        alert("Uploaded SuccessFully");
-      });
-      });
-
-      function preview_image() 
-      {
-      var total_file=document.getElementById("foto").files.length;
-      for(var i=0;i<total_file;i++)
-      {
-        $('#image_preview').append("<img src='"+URL.createObjectURL(event.target.files[i])+"'><br>");
-        $('#image_preview img').css({"height":"200px", "margin-top":"10px"});
-      }
-      }
-      
-    </script>
-
 
     <!-- ##### Featured Properties Area End ##### -->
     <script type="text/javascript" src="jquery.js"></script>
